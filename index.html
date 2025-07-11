@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>To Do List</title>
-</head>
-<body>
-    <!-- Hero Website -->
-    <link rel="stylesheet" href="style.css">
-    <head>
-        <h1> Welcome To Do List</h1>
-        <main>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Do List</title>
 
-        </main>
-        <footer>
-            <p> @ Krispianus 2025</p>
-        </footer>
-    </head>
+  <!-- Link ke file CSS eksternal -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+
+  <h1 class="text-2xl font-bold mb-4">Welcome To Do List</h1>
+
+  <!-- Form Tambah Tugas -->
+  <form id="task-form" class="flex flex-wrap gap-2 items-center mb-4">
+    <input type="text" id="task-input" class="rounded p-2 bg-white border" placeholder="Add your task" required />
+    <input type="date" id="due-date-input" class="rounded p-2 bg-white border" required />
+    <button type="submit" class="bg-blue-500 text-white p-2 rounded">Tambah</button>
+  </form>
+
+  <!-- Filter dan Hapus -->
+  <section class="flex gap-2 mb-4">
+  <button data-filter="all" class="bg-green-500 text-white p-2 rounded">All</button>
+  <button data-filter="active" class="bg-green-500 text-white p-2 rounded">Active</button>
+  <button data-filter="completed" class="bg-green-500 text-white p-2 rounded">Completed</button>
+  <button id="clear-tasks" class="bg-red-500 text-white p-2 rounded">Delete All</button>
+</section>
+
+
+  <!-- Daftar Tugas -->
+  <section class="w-full max-w-xl">
+    <h2 class="text-xl font-bold mb-2">Task</h2>
+    <ul id="task-list" class="space-y-2">
+      <!-- Tugas akan ditampilkan di sini -->
+    </ul>
+  </section>
+
+  <footer class="mt-10 text-sm text-gray-600">@Krispianus 2025</footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
 </body>
 </html>

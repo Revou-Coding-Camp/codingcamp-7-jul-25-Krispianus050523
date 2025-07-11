@@ -1,3 +1,10 @@
 body{
-    background-color:burlywood;
+    text-align: center;
+}
+main{
+    background-color:grey;
+    padding: auto;
+    margin: auto;
+    width: 80%;
+
 }
